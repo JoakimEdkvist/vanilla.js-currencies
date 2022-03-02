@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("moneycity.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 0;
+}
+main {
+  min-height: 100vh;
+  background: linear-gradient(
+    to right top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav"
+    "side side side side"
+    "fav fav chart chart"
+    "fav fav textsection textsection";
+}
+ol {
+  margin: 10%;
+}
+li {
+  list-style-type: none;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.nav {
+  grid-area: nav;
+  /*background: white;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  margin: 25px;
+}
+.navlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+  list-style-type: none;
+}
+.navlist > li {
+  max-width: 100%;
+}
+.logo {
+  max-height: 200px;
+}
+.logotext {
+  font-size: 4rem;
+  font-family: "Russo One", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  color: rgb(250, 250, 250);
+  text-transform: uppercase;
+}
+.starlogo {
+  max-height: 80px;
+  margin: 10px;
+}
+.mycharts {
+  grid-area: chart;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: white;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  min-height: 60vh;
+  min-width: 35vw;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1.5rem;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.textsection {
+  grid-area: textsection;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  /*background: white;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );*/
+  /*background-image: url("water.jpg");*/
+  background-position: center;
+  min-height: 60vh;
+  min-width: 35vw;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1.5rem;
+  margin-right: 5%;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#myChart {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 5%;
+  margin: 20px;
+}
+.favourites {
+  grid-area: fav;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*background: white;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );*/
+  min-height: 60vh;
+  min-width: 35vw;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1.5rem;
+  margin: 5%;
+  margin-bottom: 10%;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+.slideshow {
+  grid-area: side;
+  max-height: 40vh;
+  overflow: hidden;
+  /*background: linear-gradient(
+    to right top,
+    rgba(10, 11, 12, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#myfav {
+  grid-area: myfav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: rgb(247, 247, 247);
+  font-family: "Russo One", sans-serif;
+  font-size: 2rem;
+  text-shadow: black 1.5px 1px;
+  text-transform: uppercase;
+  max-height: 150px;
+}
+#currencylist > li > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10%;
+  margin: 25px;
+  min-height: 200px;
+}
+
+#currencylist > li > div > h4,
+.favlist > li > div > h4 {
+  justify-self: center;
+  align-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 4rem;
+  padding: 10px;
+}
+#currencylist > li > div > p,
+.favlist > li > div > p {
+  font-size: 2rem;
+  padding: 20px;
+  border-radius: 10%;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.favlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  padding-top: 10%;
+  margin: 20px;
+}
+
+.favlist > li {
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.favlist > li > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border-radius: 10%;
+  margin: 20px;
+  font-variant: small-caps;
+  border: solid white 3px;
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #c5c5c5 50%, #f7d026 100%);
+}
+
+.favlist > li > div > p {
+  box-shadow: 0 0 0 0;
+}
+
+.fav-button {
+  text-decoration: none;
+  border-radius: 35%;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 7px;
+  font-size: 25px;
+  font-family: "Russo One", sans-serif;
+  color: white;
+  cursor: pointer;
+  background-color: green;
+  border: solid white 3px;
+}
+.remove-button {
+  text-decoration: none;
+  border-radius: 10%;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  border: solid white 3px;
+  background-color: red;
+}
+
+.positive {
+  color: green;
+}
+.negative {
+  color: red;
+}
+
+.splide__progress__bar {
+  height: 3px;
+  background: #ccc;
+}
+
+.splide__pagination {
+  position: relative;
+  margin: 10px;
+}
+
+.splide__slide {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.splide__slide > div {
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #918f8e 0%, #dddcd9 100%);
+}
+.splide__slide > div:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1500px) {
+  .mycharts {
+    display: none;
+  }
+  .textsection {
+    display: none;
+  }
+  main {
+    grid-template-areas:
+      "nav nav nav nav"
+      "side side side side"
+      "fav fav fav fav"
+      "fav fav fav fav";
+  }
+}

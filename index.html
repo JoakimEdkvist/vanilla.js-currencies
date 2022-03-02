@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.1.9/dist/css/splide.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <nav class="nav">
+      <ol class="navlist">
+        <li>
+          <a href="cities.html"><img class="logo" src="globe.png" alt="logo" /></a>
+        </li>
+        <li>
+          <a class="logotext" href="cities.html">currency </a>
+        </li>
+      </ol>
+    </nav>
+    <section class="slideshow">
+      <div class="splide">
+        <!-- <div class="splide__slider"> -->
+        <div class="splide__track">
+          <ul id="currencylist" class="splide__list"></ul>
+        </div>
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <section class="favourites">
+      <h1 id="myfav">
+        pick your favourites<img class="starlogo" src="pngegg (8).png" alt="logo" />
+      </h1>
+      <ul class="favlist"></ul>
+    </section>
+    <section class="mycharts">
+      <canvas id="myChart"></canvas>
+    </section>
+    <section class="textsection"></section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.1.9/dist/js/splide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

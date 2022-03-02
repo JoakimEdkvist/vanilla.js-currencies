@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cities.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <main>
+    <nav>
+      <ol>
+        <li><a href="index.html"><img src="Daco_4142010.png" class="logo" alt="logo"></a></li>
+      </ol>
+    </nav>
+    <div id="info-area">
+      <div id="left-container">
+        <form id="deleteform">
+          <h1>Ta bort en stad</h1>
+          <label for="name">Stadens ID</label>
+          <input id="delete-id" placeholder="ID"><br>
+          <input id="deletebutton" type="submit" value="Ta bort">
+        </form>
+        <form id="addform">
+          <h1>Lägg till en stad</h1>
+          <label>Nya staden</label>
+          <input id="newcityname" placeholder="Namn">
+          <input id="popnumber" placeholder="Population">
+          <!--<input id="newcityid" placeholder="ID">-->
+          <input id="addbutton" type="submit" value="Lägg till denna stad">
+        </form>
+        <form id="replaceform">
+          <h1>Redigera en stad</h1>
+          <label>ID på den gamla staden du vill ändra</label>
+          <input id="findcity" placeholder="ID"><br>
+          <label>Nya ändringar</label>
+          <input id="changename" placeholder="Nytt namn på staden">
+          <input id="changepop" placeholder="Ny befolkning">
+          <input id="replacebutton" type="submit" value="Bekräfta ändringar">
+        </form>
+      </div>
+      <div id="right-container">
+        <ol id="citylist"></ol>
+      </div>
+    </div>
+  </main>
+  <script src="cities.js"></script>
+</body>
+
+</html>
